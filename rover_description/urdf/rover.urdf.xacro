@@ -9,13 +9,9 @@
 
     <!-- <xacro:include filename="arm.xacro" /> -->
 
-    <!-- <xacro:include filename="lidar.xacro" /> -->
+    <xacro:include filename="lidar.xacro" />
 
-    <!-- <xacro:include filename="camera.xacro" /> -->
-
-    <!-- <xacro:rrbot parent="world" prefix="$(arg prefix)">
-      <origin xyz="0 0 0" rpy="0 0 0" />
-    </xacro:rrbot> -->
+    <xacro:include filename="camera.xacro" />
 
     <!-- <xacro:include filename="depth_camera.xacro" /> -->
 
