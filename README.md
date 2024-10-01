@@ -1,4 +1,4 @@
-# Moonbot software
+# SRL ros2 control workshop
 
 Simulation based for slam and navigation test on mobile robot
 
