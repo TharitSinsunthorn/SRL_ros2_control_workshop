@@ -24,10 +24,6 @@ sudo apt install ros-humble-joy* ros-humble-teleop*
 
 sudo apt install ros-humble-twist-stamper
 
-sudo apt install ros-humble-navigation2
-
-sudo apt install ros-humble-nav2-bringup
-
 sudo apt install ros-humble-twist-mux
 
 
@@ -41,7 +37,6 @@ colcon build --symlink-install
 
 source install/setup.bash
 ```
-
 
 ## Packages description 
 ### rover_description
@@ -64,26 +59,18 @@ World files and robot model are also changable by the following commands
 ros2 launch rover_gazebo spawn_rover.launch.py world_file_name:=obstacles.world
 ```
 
-### rover_navigation
-- Navigation params for Nav2
-
-Nav2 with AMCL (Launch the simulation first)
 ```bash
-# terminal 1
-ros2 launch rover_navigation localization_launch.py map:=your_map_file.yaml use_sim_time:=true
+# For using teleop control via key board)
+ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=diff_cont/cmd_vel_unstamped
 
-# terminal 2
-ros2 launch rover_navigation navigation_launch.py use_sim_time:=true map_subscribe_transient_local:=true 
 ```
 
-To send a navigation goal through the command line
-```bash
-# With an action server
-ros2 action send_goal /navigate_to_pose nav2_msgs/action/NavigateToPose "pose: {header: {frame_id: map}, pose: {position: {x: 1.52, y: 1.92, z: 0.0}, orientation:{x: 0.0, y: 0.0, z: 0, w: 1.0000000}}}"
+### rover_control
+- Config file for controllers
+- Launch file for ros2 controller manager
 
-# With a topic
-ros2 topic pub -1 /goal_pose geometry_msgs/PoseStamped "{header: {stamp: {sec: 0}, frame_id: 'map'}, pose: {position: {x: 2.2, y: 0.0, z: 0.0}, orientation: {w: 1.0}}}"
-```
+### rover_teleop 
+- Launch and joy stick related files
 
 
 ## Author
