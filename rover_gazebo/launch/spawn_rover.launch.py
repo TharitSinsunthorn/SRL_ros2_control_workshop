@@ -45,7 +45,7 @@ def generate_launch_description():
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('rover_description'), 'launch', 'rsp.launch.py')
             ]),
-    launch_arguments={'use_joint_state_gui': 'True',
+    launch_arguments={'use_joint_state_gui': 'False',
                       'use_sim_time': "True",
                       'urdf_file': urdf_file}.items(),
     )
@@ -56,11 +56,11 @@ def generate_launch_description():
         ]), launch_arguments={'use_sim_true': 'true'}.items()
     )
     
-    navigation = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('rover_navigation'), 'launch', 'nav_core.launch.py')
-        ]), launch_arguments={'use_sim_true': 'true'}.items()
-    )
+    # navigation = IncludeLaunchDescription(
+    #     PythonLaunchDescriptionSource([os.path.join(
+    #         get_package_share_directory('rover_navigation'), 'launch', 'nav_core.launch.py')
+    #     ]), launch_arguments={'use_sim_true': 'true'}.items()
+    # )
 
 
     # create and return launch description object
@@ -71,7 +71,7 @@ def generate_launch_description():
             start_world,
             launch_ros2_control,
             spawn_robot,
-            # joystick, 
+            joystick, 
             # navigation
         ]
     )
