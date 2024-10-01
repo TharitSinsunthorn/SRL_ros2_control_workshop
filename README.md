@@ -7,7 +7,7 @@ Simulation based for slam and navigation test on mobile robot
 * ros2-humble
 
 ## Installation
-* Installation of ros2-humblee: [https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html](), and source the ros2 package in the terminal.
+* Installation of ros2-humble: [https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html](), and source the ros2 package in the terminal.
 ```bash
 source /opt/ros/humble/setup.bash
 ```
@@ -22,13 +22,13 @@ sudo apt install joystick
 
 sudo apt install ros-humble-joy* ros-humble-teleop*
 
-sudo apt instal ros-humble-twist-stamper
+sudo apt install ros-humble-twist-stamper
 
 sudo apt install ros-humble-navigation2
 
 sudo apt install ros-humble-nav2-bringup
 
-sudo apt instal ros-humble-twist-mux
+sudo apt install ros-humble-twist-mux
 
 
 ```
