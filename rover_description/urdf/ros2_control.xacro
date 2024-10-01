@@ -3,10 +3,22 @@
 
 
     <ros2_control name="GazeboSystem" type="system">
+
+        <!-- For Gazebo -->
         <hardware>
             <plugin>gazebo_ros2_control/GazeboSystem</plugin>
         </hardware>
+
+        <!-- In case you want to use DXL, comment lines below -->
+        <!-- <hardware>
+            <plugin>dynamixel_hardware/DynamixelHardware</plugin>
+            <param name="usb_port">/dev/ttyUSB0</param>
+            <param name="baud_rate">57600</param>
+            <param name="use_dummy">false</param>
+        </hardware> -->
+
         <joint name="left_wheel_joint">
+            <param name="id">1</param>
             <command_interface name="velocity">
                 <param name="min">-10</param>
                 <param name="max">10</param>
@@ -15,6 +27,7 @@
             <state_interface name="position"/>
         </joint>
         <joint name="right_wheel_joint">
+            <param name="id">3</param>  
             <command_interface name="velocity">
                 <param name="min">-10</param>
                 <param name="max">10</param>
