@@ -10,8 +10,7 @@
   <buildtool_depend>ament_cmake</buildtool_depend>
 
   <depend>joy</depend>
-  <depend>teleop_tool</depend>
-  <depend>teleop_tool_msgs</depend>
+  <depend>key_teleop</depend>
   <depend>twist_mux</depend>
 
   <test_depend>ament_lint_auto</test_depend>

@@ -9,8 +9,6 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(joy REQUIRED)
 find_package(key_teleop REQUIRED)
-find_package(teleop_tools REQUIRED)
-find_package(teleop_tools_msgs REQUIRED)
 find_package(twist_mux REQUIRED)
 
 if(BUILD_TESTING)
