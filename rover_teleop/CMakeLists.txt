@@ -7,9 +7,11 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+find_package(joy REQUIRED)
+find_package(key_teleop REQUIRED)
+find_package(teleop_tools REQUIRED)
+find_package(teleop_tools_msgs REQUIRED)
+find_package(twist_mux REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
