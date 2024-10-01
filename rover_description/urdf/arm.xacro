@@ -48,7 +48,7 @@
   <joint name="arm_chassis_joint" type="fixed">
     <parent link="chassis"/>
     <child link="$arm_base_link" />
-    <origin xyz="0.1 0 0"/>
+    <origin xyz="0.2 0 0"/>
   </joint>
 
   <joint name="$arm_joint1" type="continuous">

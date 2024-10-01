@@ -45,7 +45,7 @@ def generate_launch_description():
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('rover_description'), 'launch', 'rsp.launch.py')
             ]),
-    launch_arguments={'use_joint_state_gui': 'False',
+    launch_arguments={'use_joint_state_gui': 'True',
                       'use_sim_time': "True",
                       'urdf_file': urdf_file}.items(),
     )
